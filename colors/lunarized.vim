@@ -32,13 +32,13 @@ function! s:SetColor(name, color_rgb, color_256, color_16, color_name)
     if (has("gui_running") || g:lunarized_color_mode == "rgb")
         let s:fg = "guifg"
         let s:bg = "guibg"
-        let s:sp = "guisp"
         let s:fmt = "gui"
+        let s:sp = 1
     else
         let s:fg = "ctermfg"
         let s:bg = "ctermbg"
-        let s:sp = 0
         let s:fmt = "cterm"
+        let s:sp = 0
     endif
 
     if (has("gui_running") || g:lunarized_color_mode == "rgb")
