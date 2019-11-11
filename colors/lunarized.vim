@@ -9,6 +9,9 @@
 "
 " Force color mode
 "   let lunarized_color_mode = "rgb" / "256" / "16"
+"
+" Force italic support
+"   let lunarized_italic = 1
 
 highlight clear
 
@@ -63,9 +66,20 @@ function! s:Highlight(name, fmt, fg, bg, sp)
 endfunction
 
 
+function s:ItalicEnabled()
+	if get(g:, 'lunarized_italic', 'unset') != 'unset'
+		return g:lunarized_italic
+	elseif has("gui_running")
+		return 1
+	else
+		return len(filter(["rxvt", "gnome-terminal"], "$TERM =~ v:val"))
+	endif
+endfunction
+
+
 let s:none = "NONE"
 let s:bold = "bold"
-let s:italic = "italic"
+let s:italic = s:ItalicEnabled() ? "italic" : "NONE"
 let s:ucurl = "undercurl"
 let s:stndout = "standout"
 let s:uline = "underline"
