@@ -72,7 +72,7 @@ function s:ItalicEnabled()
 	elseif has("gui_running")
 		return 1
 	else
-		return len(filter(["rxvt", "gnome-terminal"], "$TERM =~ v:val"))
+		return len(filter(["rxvt", "gnome-terminal", "termite"], "$TERM =~ v:val"))
 	endif
 endfunction
 
