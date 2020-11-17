@@ -90,14 +90,17 @@ if g:lunarized_export == 1
     function! g:LunarizedHighlight(name, fmt, fg, bg, sp)
         call s:Highlight(a:name, a:fmt, a:fg, a:bg, a:sp)
     endfunction
+    function! g:LunarizedHighlightFG(name, fg)
+        call s:Highlight(a:name, s:none, a:fg, s:none, s:none)
+    endfunction
 
     let g:lunarized_none = s:none
-    let s:lunarized_bold = s:bold
-    let s:lunarized_italic = s:italic
-    let s:lunarized_ucurl = s:ucurl
-    let s:lunarized_stndout = s:stndout
-    let s:lunarized_uline = s:uline
-    let s:lunarized_reverse = s:reverse
+    let g:lunarized_bold = s:bold
+    let g:lunarized_italic = s:italic
+    let g:lunarized_ucurl = s:ucurl
+    let g:lunarized_stndout = s:stndout
+    let g:lunarized_uline = s:uline
+    let g:lunarized_reverse = s:reverse
 endif
 
 
@@ -174,11 +177,11 @@ call s:Highlight("TabLine", s:uline, s:base0, s:base02, s:base0)
 call s:Highlight("TabLineFill", s:uline, s:base0, s:base02, s:base0)
 call s:Highlight("TabLineSel", s:uline, s:base01, s:base2, s:base0)
 call s:Highlight("CursorColumn", s:none, s:none, s:base02, s:none)
-call s:Highlight("CursorLine", s:uline, s:none, s:base02, s:base1)
 call s:Highlight("CursorLine", s:none, s:none, s:base02, s:base1)
+call s:Highlight("CursorLineNr", s:none, s:base1, s:base02, s:none)
 call s:Highlight("ColorColumn", s:none, s:none, s:base02, s:none)
 call s:Highlight("Cursor", s:none, s:base03, s:base0, s:none)
-call s:Highlight("MatchParen", s:bold, s:red, s:base01, s:none)
+call s:Highlight("MatchParen", s:bold, s:orange, s:none, s:none)
 
 call s:Highlight("vimCommentString", s:none, s:violet, s:none, s:none)
 call s:Highlight("vimCommand", s:none, s:yellow, s:none, s:none)
