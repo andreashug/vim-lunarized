@@ -94,7 +94,7 @@ hi PmenuMatchSel guifg=lunarized_yellow guibg=lunarized_faint3 gui=NONE cterm=NO
 hi PmenuSbar guifg=NONE guibg=lunarized_faint2 gui=NONE cterm=NONE
 hi PmenuThumb guifg=NONE guibg=lunarized_base gui=NONE cterm=NONE
 
-hi StatusLine guifg=lunarized_bright1 guibg=lunarized_faint3 gui=reverse cterm=reverse
+hi StatusLine guifg=lunarized_base guibg=lunarized_faint3 gui=reverse cterm=reverse
 hi StatusLineNC guifg=lunarized_faint1 guibg=lunarized_faint3 gui=reverse cterm=reverse
 
 hi TabLine guifg=lunarized_base guibg=lunarized_faint3 guisp=lunarized_base gui=underline cterm=underline
@@ -117,7 +117,7 @@ hi link LineNrBelow LineNr
 
 hi CursorLine guifg=NONE guibg=lunarized_faint3 gui=NONE cterm=NONE
 hi CursorColumn guifg=NONE guibg=lunarized_faint3 gui=NONE cterm=NONE
-hi CursorLineNr guifg=lunarized_bright1 guibg=lunarized_faint3 gui=NONE cterm=NONE
+hi CursorLineNr guifg=lunarized_base guibg=lunarized_faint3 gui=NONE cterm=NONE
 
 hi FoldColumn guifg=lunarized_faint1 guibg=lunarized_faint3 gui=NONE cterm=NONE
 hi SignColumn guifg=lunarized_base guibg=lunarized_faint4 gui=NONE cterm=NONE
